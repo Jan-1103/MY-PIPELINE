@@ -17,7 +17,7 @@ pipeline {
                 echo 'Running the container...'
                 sh 'docker stop running-app || true'
                 sh 'docker rm running-app || true'
-                sh 'docker run -d -p 8080:8080 --name running-app my-demo-app:latest'
+                sh 'docker run -d -p 8081:3000 --name running-app my-demo-app:latest'
             }
         }
     }
