@@ -6,13 +6,6 @@ pipeline {
                 checkout scm
             }
         }
-        stage('Build & Test') {
-            steps {
-                echo 'Checking files...'
-                sh 'node -v'
-                sh 'npm -v'
-            }
-        }
         stage('Build Docker Image') {
             steps {
                 echo 'Building actual Docker image...'
